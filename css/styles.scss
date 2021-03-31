@@ -1,0 +1,227 @@
+// Variables
+
+// Colors
+
+$pink: hsl(322, 100%, 66%);
+$very-pale-cyan: hsl(193, 100%, 96%);
+$very-dark-cyan: hsl(192, 100%, 9%);
+$grayish-blue: hsl(208, 11%, 55%);
+
+// Fonts
+
+$poppins: "Poppins", sans-serif;
+$open-sans: "Open Sans", sans-serif;
+
+// ############################################################
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.body {
+  font-size: 18px;
+  color: $very-dark-cyan;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.btn {
+  background: $pink;
+  color: white;
+  padding: 0.7rem 2.8rem;
+  border-radius: 20px;
+  display: block;
+  font-size: 0.8rem;
+  text-align: center;
+  font-family: $open-sans;
+  font-weight: 700;
+}
+
+// Hero
+
+.hero-container {
+  background: $very-pale-cyan;
+  background-image: url("../assets/bg-hero-mobile.svg");
+  font-family: $open-sans;
+  color: $very-dark-cyan;
+
+  // @media screen and (min-width: 1024px) {
+  //   height: 100vh;
+  // }
+
+  .hero {
+    padding: 2rem 0;
+
+    // Header
+    .hero__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .hero__logo {
+        width: 100px;
+      }
+
+      .hero__btn {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: $very-dark-cyan;
+        background: #fff;
+        padding: 0.3rem 1.4rem;
+        border-radius: 40px;
+        box-shadow: 0 3px 8px -5px rgba($color: #000000, $alpha: 0.5);
+      }
+    }
+
+    // Body
+    .hero__body {
+      // padding: 1.7rem;
+      margin-top: 1.5rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 2.5rem;
+
+      @media screen and (min-width: 1024px) {
+        flex-direction: row;
+      }
+
+      .hero__texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .hero__title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          font-family: $poppins;
+        }
+
+        .hero__description {
+          font-size: 1.1rem;
+          font-weight: 400;
+          font-family: $open-sans;
+        }
+      }
+      .hero__ilustration {
+        .hero__img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Card
+
+.card-lists {
+  padding-top: 5rem;
+  margin-bottom: 10rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2.5rem;
+  font-family: $open-sans;
+
+  .card {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 15px -8px rgba($color: #000000, $alpha: 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+
+    @media screen and (min-width: 1024px) {
+      flex-direction: row-reverse;
+      &:nth-child(2) {
+        flex-direction: row;
+      }
+    }
+
+    .card__img {
+      width: 200px;
+    }
+
+    .card__texts {
+      text-align: center;
+
+      .card__title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: $very-dark-cyan;
+        margin-bottom: 1rem;
+      }
+
+      .card__paragraph {
+        font-weight: 400;
+        color: $grayish-blue;
+        // font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Footer {
+
+.footer {
+  background: $very-dark-cyan;
+  height: 500px;
+  font-family: $open-sans;
+  position: relative;
+
+  .footer__card {
+    position: absolute;
+    margin: 0 2rem;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background: #fff;
+    box-shadow: 0 0 15px -8px rgba($color: #000000, $alpha: 0.5);
+    text-align: center;
+    border-radius: 10px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .footer__question {
+      font-size: 1rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 500px;
+      transform: translate(50%, -50%);
+    }
+  }
+
+  .footer__content {
+    padding-top: 8rem;
+
+    .footer__logo {
+      fill: #fff;
+    }
+  }
+}
